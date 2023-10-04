@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Modular App Test</title>
+  <script type="module" crossorigin src="core/dist/core.js"></script>
+</head>
+<body>
+
+<div id="app"></div>
+<div id="plugin"></div>
+<script>
+  window.onload = () => {
+    new window.AppCore({
+      modules: ['plugin-1']
+    })
+  }
+</script>
+
+</body>
+</html>
