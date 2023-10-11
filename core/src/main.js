@@ -4,7 +4,9 @@ import { store } from './store.js'
 
 window.AppCore = function AppCore(config = {}) {
   store.config = config
-  createApp(App).mount('#app')
+  const plugin1 = config.modules[0]
+
+  createApp(App).use(plugin1).mount('#app')
 }
 
-export default window.AppCore;
+export default window.AppCore

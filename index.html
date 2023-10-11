@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Vue Modular App Test</title>
-  <script type="module" crossorigin src="core/dist/core.js"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+  <script type="module" crossorigin src="core/dist/core.mjs"></script>
+  <script type="module" crossorigin src="plugin-1/dist/plugin-1.mjs"></script>
 </head>
 <body>
 
 <div id="app"></div>
-<div id="plugin"></div>
 <script>
   window.onload = () => {
     new window.AppCore({
-      modules: ['plugin-1']
+      modules: [
+        window.Plugin1
+      ]
     })
   }
 </script>

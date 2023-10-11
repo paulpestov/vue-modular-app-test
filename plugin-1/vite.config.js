@@ -14,6 +14,12 @@ export default defineConfig({
     }
   },
   build: {
+    // rollupOptions: {
+    //   output: {
+    //     entryFileNames: 'plugin-1.js',
+    //     assetFileNames: 'plugin-1.css',
+    //   }
+    // }
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'src/main.js'),
